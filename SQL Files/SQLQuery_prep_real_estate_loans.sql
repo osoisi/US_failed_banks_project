@@ -1,0 +1,5 @@
+SELECT
+YEAR(Date) AS YEAR,
+Real_Estate_Loans_Percent_Change
+INTO prepared_real_estate_loans
+FROM Real_Estate_Loans

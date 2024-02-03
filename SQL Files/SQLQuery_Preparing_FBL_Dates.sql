@@ -18,4 +18,5 @@ CASE WHEN MONTH(Closing_Date) = 12 THEN 'December'
     END AS Month_Name,
 DATENAME(WEEKDAY, Closing_Date) AS DAY,
 CAST(Closing_Date AS DATE) AS Date
+INTO prepared_failed_bank_dates
 FROM failed_bank_list

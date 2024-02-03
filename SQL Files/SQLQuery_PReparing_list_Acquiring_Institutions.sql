@@ -1,0 +1,5 @@
+SELECT
+SN AS Acquiring_Bank_ID,
+Acquiring_Institution
+INTO list_acquiring_institutions
+  FROM prepared_number_of_acquisitions
