@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 2,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"573bb436f4610cd63f74\",\"layouts\":[{\"id\":0,\"position\":{\"x\":411.85185185185185,\"y\":0,\"z\":2000,\"width\":868.1481481481482,\"height\":289.38271604938274,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"City_bank_shitdowns_acquisitions.state\"},{\"queryRef\":\"Sum(City_bank_shitdowns_acquisitions.Count_of_Shutdowns)\"},{\"queryRef\":\"Sum(City_bank_shitdowns_acquisitions.Acquisitions_per_state)\"},{\"queryRef\":\"Sum(City_bank_shitdowns_acquisitions.Not_acquired_per_state)\"},{\"queryRef\":\"City_bank_shitdowns_acquisitions.Cities_of_shutdowns_per_state\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"City_bank_shitdowns_acquisitions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"state\"},\"Name\":\"City_bank_shitdowns_acquisitions.state\",\"NativeReferenceName\":\"state\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Not_acquired_per_state\"}},\"Function\":0},\"Name\":\"Sum(City_bank_shitdowns_acquisitions.Not_acquired_per_state)\",\"NativeReferenceName\":\"Sum of Not_acquired_per_state\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Count_of_Shutdowns\"}},\"Function\":0},\"Name\":\"Sum(City_bank_shitdowns_acquisitions.Count_of_Shutdowns)\",\"NativeReferenceName\":\"Sum of Count_of_Shutdowns\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Acquisitions_per_state\"}},\"Function\":0},\"Name\":\"Sum(City_bank_shitdowns_acquisitions.Acquisitions_per_state)\",\"NativeReferenceName\":\"Sum of Acquisitions_per_state\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cities_of_shutdowns_per_state\"},\"Name\":\"City_bank_shitdowns_acquisitions.Cities_of_shutdowns_per_state\",\"NativeReferenceName\":\"Cities_of_shutdowns_per_state\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Count_of_Shutdowns\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"70.30864197530863D\"}}}},\"selector\":{\"metadata\":\"Sum(City_bank_shitdowns_acquisitions.Count_of_Shutdowns)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"87.19754979904478D\"}}}},\"selector\":{\"metadata\":\"Sum(City_bank_shitdowns_acquisitions.Acquisitions_per_state)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"96.19754289571591D\"}}}},\"selector\":{\"metadata\":\"Sum(City_bank_shitdowns_acquisitions.Not_acquired_per_state)\"}}]}}}",
+          "filters": "[]",
+          "height": 289.38,
+          "width": 868.15,
+          "x": 411.85,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"97cce53c7e77255bf34d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.876543209876544,\"y\":0,\"z\":1000,\"width\":401.97530864197535,\"height\":289.38271604938274,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"prepared_failed_bank_dates.Bank_Name\"},{\"queryRef\":\"prepared_failed_bank_dates.YEAR\"},{\"queryRef\":\"Sum(prepared_failed_bank_dates.MONTH)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"prepared_failed_bank_dates\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Bank_Name\"},\"Name\":\"prepared_failed_bank_dates.Bank_Name\",\"NativeReferenceName\":\"Bank_Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"YEAR\"},\"Name\":\"prepared_failed_bank_dates.YEAR\",\"NativeReferenceName\":\"YEAR\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"MONTH\"},\"Name\":\"Sum(prepared_failed_bank_dates.MONTH)\",\"NativeReferenceName\":\"MONTH\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"MONTH\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 289.38,
+          "width": 401.98,
+          "x": 9.88,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"dd409702aa4e03948fe0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.608006672226855,\"y\":304.25354462051706,\"z\":0,\"width\":965.0708924103419,\"height\":357.63135946622185,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"economic_data_bank_shutdown.Year\"},{\"queryRef\":\"economic_data_bank_shutdown.ShutDowns\"},{\"queryRef\":\"economic_data_bank_shutdown.Acquisitions\"},{\"queryRef\":\"economic_data_bank_shutdown.Consumer_Card_Loans_Percent_Change\"},{\"queryRef\":\"economic_data_bank_shutdown.Consumer_Loans_In_Billions\"},{\"queryRef\":\"economic_data_bank_shutdown.Consumer_Loans_In_Billions_Bank_Credit\"},{\"queryRef\":\"economic_data_bank_shutdown.Real_Estate_Loans_Percent_Change\"},{\"queryRef\":\"economic_data_bank_shutdown.Bank_credit_Percent_Change\"},{\"queryRef\":\"economic_data_bank_shutdown.Borrowings_Percentage_Change\"},{\"queryRef\":\"economic_data_bank_shutdown.Inflation_GDP_Percentage\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"economic_data_bank_shutdown\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Year\"},\"Name\":\"economic_data_bank_shutdown.Year\",\"NativeReferenceName\":\"Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"ShutDowns\"},\"Name\":\"economic_data_bank_shutdown.ShutDowns\",\"NativeReferenceName\":\"ShutDowns\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Acquisitions\"},\"Name\":\"economic_data_bank_shutdown.Acquisitions\",\"NativeReferenceName\":\"Acquisitions\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Consumer_Card_Loans_Percent_Change\"},\"Name\":\"economic_data_bank_shutdown.Consumer_Card_Loans_Percent_Change\",\"NativeReferenceName\":\"Consumer_Card_Loans_Percent_Change\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Consumer_Loans_In_Billions\"},\"Name\":\"economic_data_bank_shutdown.Consumer_Loans_In_Billions\",\"NativeReferenceName\":\"Consumer_Loans_In_Billions\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Consumer_Loans_In_Billions_Bank_Credit\"},\"Name\":\"economic_data_bank_shutdown.Consumer_Loans_In_Billions_Bank_Credit\",\"NativeReferenceName\":\"Consumer_Loans_In_Billions_Bank_Credit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Bank_credit_Percent_Change\"},\"Name\":\"economic_data_bank_shutdown.Bank_credit_Percent_Change\",\"NativeReferenceName\":\"Bank_credit_Percent_Change\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Borrowings_Percentage_Change\"},\"Name\":\"economic_data_bank_shutdown.Borrowings_Percentage_Change\",\"NativeReferenceName\":\"Borrowings_Percentage_Change\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Inflation_GDP_Percentage\"},\"Name\":\"economic_data_bank_shutdown.Inflation_GDP_Percentage\",\"NativeReferenceName\":\"Inflation_GDP_Percentage\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Real_Estate_Loans_Percent_Change\"},\"Name\":\"economic_data_bank_shutdown.Real_Estate_Loans_Percent_Change\",\"NativeReferenceName\":\"Real_Estate_Loans_Percent_Change\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"ShutDowns\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"109.82569511674134D\"}}}},\"selector\":{\"metadata\":\"economic_data_bank_shutdown.Consumer_Card_Loans_Percent_Change\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"76.14339600159542D\"}}}},\"selector\":{\"metadata\":\"economic_data_bank_shutdown.Consumer_Loans_In_Billions\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"109.69056837921687D\"}}}},\"selector\":{\"metadata\":\"economic_data_bank_shutdown.Consumer_Loans_In_Billions_Bank_Credit\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"114.85236503743846D\"}}}},\"selector\":{\"metadata\":\"economic_data_bank_shutdown.Real_Estate_Loans_Percent_Change\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"100.40615540485827D\"}}}},\"selector\":{\"metadata\":\"economic_data_bank_shutdown.Bank_credit_Percent_Change\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"82.83902500323299D\"}}}},\"selector\":{\"metadata\":\"economic_data_bank_shutdown.Borrowings_Percentage_Change\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"87.60885797989717D\"}}}},\"selector\":{\"metadata\":\"economic_data_bank_shutdown.Inflation_GDP_Percentage\"}}]}}}",
+          "filters": "[]",
+          "height": 357.63,
+          "width": 965.07,
+          "x": 9.61,
+          "y": 304.25,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

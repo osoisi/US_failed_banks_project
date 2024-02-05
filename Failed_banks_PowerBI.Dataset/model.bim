@@ -1,0 +1,1067 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"prepared_failed_bank_dates\",\"prepared_failed_bank_list\",\"prepared_failed_banks_not_acquired\",\"prepared_list_acquiring_institutions\",\"prepared_number_of_acquisitions\",\"economic_data_bank_shutdown\",\"City_bank_shitdowns_acquisitions\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.124.2028.0 (23.12)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-GB",
+    "cultures": [
+      {
+        "name": "en-GB",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "b870c22e-dd1c-4cd5-94e6-b618afc35217",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "Cert",
+        "fromTable": "prepared_failed_bank_dates",
+        "toColumn": "Cert",
+        "toTable": "prepared_failed_banks_not_acquired"
+      },
+      {
+        "name": "585966dc-a962-4197-affc-f69d2871b69a",
+        "fromColumn": "Acquiring_Bank_ID",
+        "fromTable": "prepared_failed_bank_list",
+        "toColumn": "SN",
+        "toTable": "prepared_number_of_acquisitions"
+      },
+      {
+        "name": "60cfa284-50d6-479b-98da-f694124b57b5",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "Cert",
+        "fromTable": "prepared_failed_bank_list",
+        "toColumn": "Cert",
+        "toTable": "prepared_failed_bank_dates"
+      },
+      {
+        "name": "b8d26743-728b-419c-9d0f-88da33ab4eb5",
+        "fromColumn": "Acquiring_Bank_ID",
+        "fromTable": "prepared_failed_bank_list",
+        "toColumn": "Acquiring_Bank_ID",
+        "toTable": "prepared_list_acquiring_institutions"
+      },
+      {
+        "name": "0b8b5894-9871-427c-8753-ebc445b9fca5",
+        "fromColumn": "YEAR",
+        "fromTable": "prepared_failed_bank_dates",
+        "toColumn": "Year",
+        "toTable": "economic_data_bank_shutdown"
+      },
+      {
+        "name": "b7a8b0c0-d8a3-49b7-a63a-c4423db86715",
+        "fromColumn": "State",
+        "fromTable": "prepared_failed_bank_list",
+        "toColumn": "state",
+        "toTable": "City_bank_shitdowns_acquisitions"
+      }
+    ],
+    "sourceQueryCulture": "en-GB",
+    "tables": [
+      {
+        "name": "prepared_failed_bank_dates",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Cert",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0e725eba-d3f9-4d42-b5fd-8c3627f6354d",
+            "sourceColumn": "Cert",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bank_Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2eca6140-546f-4b08-8374-ef10f5ea56ce",
+            "sourceColumn": "Bank_Name",
+            "sourceProviderType": "nvarchar(100)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1e84e595-f9ad-41ee-a808-2f72ab11999d",
+            "sourceColumn": "YEAR",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MONTH",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "281653e1-eb65-4437-b3a6-7b1b4408ce05",
+            "sourceColumn": "MONTH",
+            "sourceProviderType": "int",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Month_Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "92253608-5749-4169-a2dd-677aa70913b2",
+            "sourceColumn": "Month_Name",
+            "sourceProviderType": "varchar(9)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DAY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "def7e978-bb22-4cd7-b18f-c40802ee15ff",
+            "sourceColumn": "DAY",
+            "sourceProviderType": "nvarchar(30)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "ad1668a9-bd20-44b9-b6dc-11410745fea6",
+            "sourceColumn": "Date",
+            "sourceProviderType": "date",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "04718e62-b8bf-40e7-95d2-a9d3a88aa774",
+        "partitions": [
+          {
+            "name": "prepared_failed_bank_dates",
+            "mode": "directQuery",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"LAPTOP-4K423J2I\\SQLEXPRESS\", \"us_banks-database\"),",
+                "    dbo_prepared_failed_bank_dates = Source{[Schema=\"dbo\",Item=\"prepared_failed_bank_dates\"]}[Data]",
+                "in",
+                "    dbo_prepared_failed_bank_dates"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "prepared_failed_bank_list",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Bank_Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4aa0b30a-05e8-46ee-a227-eaf6e4b3b002",
+            "sourceColumn": "Bank_Name",
+            "sourceProviderType": "nvarchar(100)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "26d89cab-5155-4a99-8702-269b731aad9d",
+            "sourceColumn": "City",
+            "sourceProviderType": "nvarchar(50)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "State",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aff3a613-872e-4f49-aa14-a7bcb57eb670",
+            "sourceColumn": "State",
+            "sourceProviderType": "nvarchar(50)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cert",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "dce71a9c-90b2-41bc-a6b1-f256303cdc06",
+            "sourceColumn": "Cert",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Acquiring_Bank_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5380074b-40b8-4656-be9e-ad609f90d195",
+            "sourceColumn": "Acquiring_Bank_ID",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fund",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1c4a9564-e80a-43f4-ab85-181b7a07950e",
+            "sourceColumn": "Fund",
+            "sourceProviderType": "int",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Shutdown_Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "86050312-e249-4aaa-9415-7aed2fe5b2f5",
+            "sourceColumn": "Shutdown_Date",
+            "sourceProviderType": "date",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3cfe1da6-9d56-4f83-86ca-358fa01eec16",
+        "partitions": [
+          {
+            "name": "prepared_failed_bank_list",
+            "mode": "directQuery",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"LAPTOP-4K423J2I\\SQLEXPRESS\", \"us_banks-database\"),",
+                "    dbo_prepared_failed_bank_list = Source{[Schema=\"dbo\",Item=\"prepared_failed_bank_list\"]}[Data]",
+                "in",
+                "    dbo_prepared_failed_bank_list"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "prepared_failed_banks_not_acquired",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Failed_Banks_Not_Acquired",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f1833068-5448-49ef-80f2-36acc2bc8087",
+            "sourceColumn": "Failed_Banks_Not_Acquired",
+            "sourceProviderType": "nvarchar(100)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cert",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ce90c164-9223-4a59-8238-36879db0f6df",
+            "sourceColumn": "Cert",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "794b5208-8953-4d8e-8dbf-e171a1c61175",
+        "partitions": [
+          {
+            "name": "prepared_failed_banks_not_acquired",
+            "mode": "directQuery",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"LAPTOP-4K423J2I\\SQLEXPRESS\", \"us_banks-database\"),",
+                "    dbo_prepared_failed_banks_not_acquired = Source{[Schema=\"dbo\",Item=\"prepared_failed_banks_not_acquired\"]}[Data]",
+                "in",
+                "    dbo_prepared_failed_banks_not_acquired"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "prepared_list_acquiring_institutions",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Acquiring_Bank_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isNullable": false,
+            "lineageTag": "a82b615e-7992-42f4-843e-3315dedb9f27",
+            "sourceColumn": "Acquiring_Bank_ID",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Acquiring_Institution",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d4878c88-9798-419c-9878-96a0121dc609",
+            "sourceColumn": "Acquiring_Institution",
+            "sourceProviderType": "nvarchar(100)",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a9a43a67-bf23-4e9d-8d26-f8af608eff90",
+        "partitions": [
+          {
+            "name": "prepared_list_acquiring_institutions",
+            "mode": "directQuery",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"LAPTOP-4K423J2I\\SQLEXPRESS\", \"us_banks-database\"),",
+                "    dbo_prepared_list_acquiring_institutions = Source{[Schema=\"dbo\",Item=\"prepared_list_acquiring_institutions\"]}[Data]",
+                "in",
+                "    dbo_prepared_list_acquiring_institutions"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "prepared_number_of_acquisitions",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "SN",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isNullable": false,
+            "lineageTag": "ae00673e-89a7-4dea-8b77-9874b7a96734",
+            "sourceColumn": "SN",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Acquiring_Institution",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9b4cc6ef-71e9-45b7-af18-298e912ad0bd",
+            "sourceColumn": "Acquiring_Institution",
+            "sourceProviderType": "nvarchar(100)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Number_of_Acquisitions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0fb06715-5366-4fe6-850d-89688aad0eeb",
+            "sourceColumn": "Number_of_Acquisitions",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "List_of_Banks_Acquired",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6d3add9a-fb0b-4f9e-966f-ad3f068f6473",
+            "sourceColumn": "List_of_Banks_Acquired",
+            "sourceProviderType": "nvarchar(4000)",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "015ddf65-2c39-49de-b479-9354475cb5d5",
+        "partitions": [
+          {
+            "name": "prepared_number_of_acquisitions",
+            "mode": "directQuery",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"LAPTOP-4K423J2I\\SQLEXPRESS\", \"us_banks-database\"),",
+                "    dbo_prepared_number_of_acquisitions = Source{[Schema=\"dbo\",Item=\"prepared_number_of_acquisitions\"]}[Data],",
+                "    #\"Sorted Rows\" = Table.Sort(dbo_prepared_number_of_acquisitions,{{\"Number_of_Acquisitions\", Order.Descending}})",
+                "in",
+                "    #\"Sorted Rows\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "economic_data_bank_shutdown",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "117efc43-5827-4ecf-94eb-0374dcb15e17",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ShutDowns",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "39a781af-d8ff-4b99-84e2-a0822cd37413",
+            "sourceColumn": "ShutDowns",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Acquisitions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e6b57470-5242-4de5-814d-c0ede15e52b7",
+            "sourceColumn": "Acquisitions",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Real_Estate_Loans_Percent_Change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "d5e1885e-332f-472b-94eb-a777f55e5dae",
+            "sourceColumn": "Real_Estate_Loans_Percent_Change",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Consumer_Loans_In_Billions_Bank_Credit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "1e71467e-66a0-4b17-8ad9-dc2adc1d0659",
+            "sourceColumn": "Consumer_Loans_In_Billions_Bank_Credit",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Consumer_Card_Loans_Percent_Change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "92fc8a9a-794f-4852-83c6-71b1a98e2b03",
+            "sourceColumn": "Consumer_Card_Loans_Percent_Change",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Consumer_Loans_In_Billions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "bb593cab-293e-4150-9f5c-9c86488bebf9",
+            "sourceColumn": "Consumer_Loans_In_Billions",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Borrowings_Percentage_Change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "8ed55f7b-323d-4f02-bf7d-ac4f85f2acf3",
+            "sourceColumn": "Borrowings_Percentage_Change",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bank_credit_Percent_Change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "5543a19d-e4d3-4811-a3ee-b5515c015122",
+            "sourceColumn": "Bank_credit_Percent_Change",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Inflation_GDP_Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "248ff5a2-4069-4617-a016-e415b036fcf7",
+            "sourceColumn": "Inflation_GDP_Percentage",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "4520faf3-fed1-49e7-8fdd-4cff54b59fbb",
+        "partitions": [
+          {
+            "name": "economic_data_bank_shutdown",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"localhost\\SQLEXPRESS\", \"us_banks-database\"),",
+                "    dbo_economic_data_bank_shutdown = Source{[Schema=\"dbo\",Item=\"economic_data_bank_shutdown\"]}[Data]",
+                "in",
+                "    dbo_economic_data_bank_shutdown"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_af82403c-de08-41ea-9b2d-aa78dbd5615a",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "e0a2d7a6-b62b-451c-8536-69b3680256f3",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "83ada9df-b9bb-418d-8018-9d916f5b5222",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "2f64fed1-6ebc-4fea-a1f4-e408fe995f2b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "c78675d3-3975-4a13-be09-3635346a37e6",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "d4aff914-88a9-4245-a874-a657589babee",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "b618731e-94ad-4ddf-a6e9-af43b8c9ab82",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "4554fe7a-f814-4330-b36e-beaeda729b90",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "463a4222-caed-4cb8-a3eb-982befdc0f90",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "f7d82a2f-fae3-4763-bd8a-6401c51019dd",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "f6837cae-2ea7-47a4-96ba-9aaea8f4bacd",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "2556c8df-3849-4981-81e7-da43ddadf01d",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "79d83786-6007-4a47-8c6c-8f148ab1b2dd"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "b831958d-3bc2-44a9-9e45-90c29724bb60",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_af82403c-de08-41ea-9b2d-aa78dbd5615a",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "City_bank_shitdowns_acquisitions",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "state",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3e56acd6-e987-40c6-b79b-59f86fb9f136",
+            "sourceColumn": "state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Count_of_Shutdowns",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9e2717d3-d9b9-4555-8488-33d74149d9a0",
+            "sourceColumn": "Count_of_Shutdowns",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Acquisitions_per_state",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "310a55b0-0b99-4d9c-9639-59b6fe896cc5",
+            "sourceColumn": "Acquisitions_per_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Not_acquired_per_state",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4df324f4-7887-4385-9d11-6ec2dfa5bbf2",
+            "sourceColumn": "Not_acquired_per_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cities_of_shutdowns_per_state",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cccbd157-ebc9-4011-90fd-a662b2f0ee21",
+            "sourceColumn": "Cities_of_shutdowns_per_state",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "1d654629-e7f8-442a-afe2-e34d28976df7",
+        "partitions": [
+          {
+            "name": "City_bank_shitdowns_acquisitions",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"localhost\\SQLEXPRESS\", \"us_banks-database\"),",
+                "    dbo_City_bank_shitdowns_acquisitions = Source{[Schema=\"dbo\",Item=\"City_bank_shitdowns_acquisitions\"]}[Data]",
+                "in",
+                "    dbo_City_bank_shitdowns_acquisitions"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
