@@ -2,4 +2,4 @@
 * text=auto
 *.sql linguist-detectable=true
 *.pibp linguist-detectable=true
-*.json text
+*.json linguist-detectable=true
