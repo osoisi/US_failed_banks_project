@@ -1,5 +1,4 @@
 # Auto-detect text files and perform LF normalization
 * text=auto
-*.sql linguist-detectable=sql
-*.pibp linguist-detectable=PowerBI
-*.json linguist-detectable=json
+*.sql linguist-genrated=true
+*.json linguist-generated=true
