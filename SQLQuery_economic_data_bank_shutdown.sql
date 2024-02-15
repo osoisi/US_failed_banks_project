@@ -1,4 +1,4 @@
-CREATE VIEW economic_data_bank_shutdown AS
+CREATE VIEW view_economic_data_bank_shutdown AS
 SELECT
 fbl.Year, 
 COUNT(fbl.Bank_Name) AS ShutDowns,
@@ -10,7 +10,7 @@ clb.Consumer_Loans_In_Billions,
 b.Percentage_Change AS Borrowings_Percentage_Change,
 bc.Bank_credit_Percent_Change,
 wi.Inflation_GDP_Percentage
-FROM prepared_failed_bank_list as fbl
+FROM prepared_failed_banks as fbl
 INNER JOIN prepared_real_estate_loans as rel 
 ON fbl.YEAR=rel.YEAR
 INNER JOIN prepared_loans_leases_bank_credit as llbc

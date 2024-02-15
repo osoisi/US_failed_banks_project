@@ -10,76 +10,37 @@
       "nodes": [
         {
           "location": {
-            "x": 354,
-            "y": 42.75
+            "x": 400.20156119318517,
+            "y": 8.2500000000000568
           },
-          "nodeIndex": "prepared_failed_bank_dates",
-          "nodeLineageTag": "04718e62-b8bf-40e7-95d2-a9d3a88aa774",
+          "nodeIndex": "prepared_failed_banks",
+          "nodeLineageTag": "5563eb4a-27bf-46ae-9b7c-aa47fed26971",
           "size": {
-            "height": 248,
-            "width": 234
-          },
-          "zIndex": 3
-        },
-        {
-          "location": {
-            "x": 678,
-            "y": 121.75
-          },
-          "nodeIndex": "prepared_failed_bank_list",
-          "nodeLineageTag": "3cfe1da6-9d56-4f83-86ca-358fa01eec16",
-          "size": {
-            "height": 248,
+            "height": 272,
             "width": 234
           },
           "zIndex": 4
         },
         {
           "location": {
-            "x": 453,
-            "y": 560.75
+            "x": 471,
+            "y": 461.39041281975449
           },
-          "nodeIndex": "prepared_failed_banks_not_acquired",
-          "nodeLineageTag": "794b5208-8953-4d8e-8dbf-e171a1c61175",
+          "nodeIndex": "view_city_bank_shutdowns_acquisitions",
+          "nodeLineageTag": "3e13f692-019b-4ca1-85c9-b617d0bc3ded",
           "size": {
-            "height": 128,
-            "width": 234
+            "height": 202,
+            "width": 226
           },
-          "zIndex": 7
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 839,
-            "y": 569.75
+            "x": 0,
+            "y": 121.75
           },
-          "nodeIndex": "prepared_list_acquiring_institutions",
-          "nodeLineageTag": "a9a43a67-bf23-4e9d-8d26-f8af608eff90",
-          "size": {
-            "height": 128,
-            "width": 234
-          },
-          "zIndex": 5
-        },
-        {
-          "location": {
-            "x": 968,
-            "y": 43.75
-          },
-          "nodeIndex": "prepared_number_of_acquisitions",
-          "nodeLineageTag": "015ddf65-2c39-49de-b479-9354475cb5d5",
-          "size": {
-            "height": 176,
-            "width": 234
-          },
-          "zIndex": 6
-        },
-        {
-          "location": {
-            "x": 77,
-            "y": 340.75
-          },
-          "nodeIndex": "economic_data_bank_shutdown",
-          "nodeLineageTag": "4520faf3-fed1-49e7-8fdd-4cff54b59fbb",
+          "nodeIndex": "view_economic_data_bank_shutdown",
+          "nodeLineageTag": "939a104c-9c40-4956-b4f2-6a45b0d762aa",
           "size": {
             "height": 300,
             "width": 234
@@ -88,25 +49,26 @@
         },
         {
           "location": {
-            "x": 1000,
-            "y": 317.25
+            "x": 774.18148882150854,
+            "y": 260.32020640987724
           },
-          "nodeIndex": "city_bank_shutdowns_acquisitions",
+          "nodeIndex": "city_state",
+          "nodeLineageTag": "6c83b176-2a0f-41d0-81d0-d3ef676f5083",
           "size": {
-            "height": 200,
+            "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 1207,
-            "y": 277.75
+            "x": 210.18148882150854,
+            "y": 409.32020640987719
           },
-          "nodeIndex": "prepared_worldbank_inflationdata_US",
-          "nodeLineageTag": "2b16a60f-02ad-43bc-9104-8a69951d8800",
+          "nodeIndex": "economy_and_failed_banks_merged",
+          "nodeLineageTag": "f6a78b46-7b1a-49c8-bdb3-2e26101da810",
           "size": {
-            "height": 128,
+            "height": 300,
             "width": 234
           },
           "zIndex": 0
