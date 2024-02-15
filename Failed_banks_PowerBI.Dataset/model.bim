@@ -1,10 +1,10 @@
 {
-  "compatibilityLevel": 1550,
+  "compatibilityLevel": 1567,
   "model": {
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"prepared_failed_bank_dates\",\"prepared_failed_bank_list\",\"prepared_failed_banks_not_acquired\",\"prepared_list_acquiring_institutions\",\"prepared_number_of_acquisitions\",\"economic_data_bank_shutdown\",\"City_bank_shitdowns_acquisitions\"]"
+        "value": "[\"prepared_failed_bank_dates\",\"prepared_failed_bank_list\",\"prepared_failed_banks_not_acquired\",\"prepared_list_acquiring_institutions\",\"prepared_number_of_acquisitions\",\"economic_data_bank_shutdown\",\"city_bank_shutdowns_acquisitions\",\"prepared_worldbank_inflationdata_US\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -83,7 +83,16 @@
         "fromColumn": "State",
         "fromTable": "prepared_failed_bank_list",
         "toColumn": "state",
-        "toTable": "City_bank_shitdowns_acquisitions"
+        "toTable": "city_bank_shutdowns_acquisitions"
+      },
+      {
+        "name": "27c9a3a6-195d-48cf-9a02-28cbc12a7ffd",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "YEAR",
+        "fromTable": "prepared_worldbank_inflationdata_US",
+        "toColumn": "Year",
+        "toTable": "economic_data_bank_shutdown"
       }
     ],
     "sourceQueryCulture": "en-GB",
@@ -967,11 +976,16 @@
         ]
       },
       {
-        "name": "City_bank_shitdowns_acquisitions",
+        "name": "city_bank_shutdowns_acquisitions",
         "annotations": [
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "Name"
           }
         ],
         "columns": [
@@ -1047,7 +1061,7 @@
         "lineageTag": "1d654629-e7f8-442a-afe2-e34d28976df7",
         "partitions": [
           {
-            "name": "City_bank_shitdowns_acquisitions",
+            "name": "city_bank_shutdowns_acquisitions",
             "mode": "import",
             "source": {
               "expression": [
@@ -1056,6 +1070,59 @@
                 "    dbo_City_bank_shitdowns_acquisitions = Source{[Schema=\"dbo\",Item=\"City_bank_shitdowns_acquisitions\"]}[Data]",
                 "in",
                 "    dbo_City_bank_shitdowns_acquisitions"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "prepared_worldbank_inflationdata_US",
+        "columns": [
+          {
+            "name": "YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3e712a2a-c4cb-4d07-9bc3-4d77cea8540b",
+            "sourceColumn": "YEAR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Inflation_GDP_Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "af3c08a9-7ad7-4c69-ba20-39f930479559",
+            "sourceColumn": "Inflation_GDP_Percentage",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "2b16a60f-02ad-43bc-9104-8a69951d8800",
+        "partitions": [
+          {
+            "name": "prepared_worldbank_inflationdata_US",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"localhost\\SQLEXPRESS\", \"us_banks-database\"),",
+                "    dbo_prepared_worldbank_inflationdata_US = Source{[Schema=\"dbo\",Item=\"prepared_worldbank_inflationdata_US\"]}[Data]",
+                "in",
+                "    dbo_prepared_worldbank_inflationdata_US"
               ],
               "type": "m"
             }

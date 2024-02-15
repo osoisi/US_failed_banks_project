@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 354,
-            "y": 28.5
+            "y": 42.75
           },
           "nodeIndex": "prepared_failed_bank_dates",
           "nodeLineageTag": "04718e62-b8bf-40e7-95d2-a9d3a88aa774",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 678,
-            "y": 107.5
+            "y": 121.75
           },
           "nodeIndex": "prepared_failed_bank_list",
           "nodeLineageTag": "3cfe1da6-9d56-4f83-86ca-358fa01eec16",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 453,
-            "y": 546.5
+            "y": 560.75
           },
           "nodeIndex": "prepared_failed_banks_not_acquired",
           "nodeLineageTag": "794b5208-8953-4d8e-8dbf-e171a1c61175",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 839,
-            "y": 555.5
+            "y": 569.75
           },
           "nodeIndex": "prepared_list_acquiring_institutions",
           "nodeLineageTag": "a9a43a67-bf23-4e9d-8d26-f8af608eff90",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 968,
-            "y": 29.5
+            "y": 43.75
           },
           "nodeIndex": "prepared_number_of_acquisitions",
           "nodeLineageTag": "015ddf65-2c39-49de-b479-9354475cb5d5",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 77,
-            "y": 326.5
+            "y": 340.75
           },
           "nodeIndex": "economic_data_bank_shutdown",
           "nodeLineageTag": "4520faf3-fed1-49e7-8fdd-4cff54b59fbb",
@@ -89,12 +89,24 @@
         {
           "location": {
             "x": 1000,
-            "y": 303
+            "y": 317.25
           },
-          "nodeIndex": "City_bank_shitdowns_acquisitions",
-          "nodeLineageTag": "1d654629-e7f8-442a-afe2-e34d28976df7",
+          "nodeIndex": "city_bank_shutdowns_acquisitions",
           "size": {
             "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1207,
+            "y": 277.75
+          },
+          "nodeIndex": "prepared_worldbank_inflationdata_US",
+          "nodeLineageTag": "2b16a60f-02ad-43bc-9104-8a69951d8800",
+          "size": {
+            "height": 128,
             "width": 234
           },
           "zIndex": 0
