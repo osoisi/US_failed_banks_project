@@ -9,5 +9,5 @@ US Banking Data Highlighting the Failed Banks over the last two decades. This pr
 
  ##Tools
  - Azure Data Studio
- - MSSQL
- - Azure Data Studio
+ - Micorsoft SQL Server
+ - Microsoft PowerBI
