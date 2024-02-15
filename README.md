@@ -11,6 +11,5 @@
 
  ##Tools
  - Azure Data Studio
- - MSSQL
+ - Micorsoft SQL Server
  - Microsoft PowerBI
-
