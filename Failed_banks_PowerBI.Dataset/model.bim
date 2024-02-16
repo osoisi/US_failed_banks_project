@@ -1374,7 +1374,7 @@
             "summarizeBy": "sum"
           },
           {
-            "name": "Inflation GDP %",
+            "name": "Inflation-to-GDP %",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -1387,7 +1387,7 @@
             ],
             "dataType": "double",
             "lineageTag": "fdd25e1c-95f3-44d7-a9fe-850aeb5dfb0c",
-            "sourceColumn": "Inflation GDP %",
+            "sourceColumn": "Inflation-to-GDP %",
             "summarizeBy": "sum"
           }
         ],
@@ -1401,7 +1401,7 @@
                 "let",
                 "    Source = Sql.Database(\"localhost\\SQLEXPRESS\", \"us_banks-database\"),",
                 "    dbo_view_economic_data_bank_shutdown = Source{[Schema=\"dbo\",Item=\"view_economic_data_bank_shutdown\"]}[Data],",
-                "    #\"Renamed Columns\" = Table.RenameColumns(dbo_view_economic_data_bank_shutdown,{{\"Real_Estate_Loans_Percent_Change\", \"Real Estate Loans % Change\"}, {\"Consumer_Loans_In_Billions_Bank_Credit\", \"Consumer Loans (Billions)- Bank Credit\"}, {\"Consumer_Card_Loans_Percent_Change\", \"Consumer Card Loans % Change\"}, {\"Consumer_Loans_In_Billions\", \"Consumer Loans (Billions)\"}, {\"Borrowings_Percentage_Change\", \"Borrowings % Change\"}, {\"Bank_credit_Percent_Change\", \"Bank Credit % Change\"}, {\"Inflation_GDP_Percentage\", \"Inflation GDP %\"}})",
+                "    #\"Renamed Columns\" = Table.RenameColumns(dbo_view_economic_data_bank_shutdown,{{\"Real_Estate_Loans_Percent_Change\", \"Real Estate Loans % Change\"}, {\"Consumer_Loans_In_Billions_Bank_Credit\", \"Consumer Loans (Billions)- Bank Credit\"}, {\"Consumer_Card_Loans_Percent_Change\", \"Consumer Card Loans % Change\"}, {\"Consumer_Loans_In_Billions\", \"Consumer Loans (Billions)\"}, {\"Borrowings_Percentage_Change\", \"Borrowings % Change\"}, {\"Bank_credit_Percent_Change\", \"Bank Credit % Change\"}, {\"Inflation_GDP_Percentage\", \"Inflation-to-GDP %\"}})",
                 "in",
                 "    #\"Renamed Columns\""
               ],
