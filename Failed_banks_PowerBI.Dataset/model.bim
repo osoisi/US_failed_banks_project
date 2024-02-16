@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"view_city_bank_shutdowns_acquisitions\",\"view_economic_data_bank_shutdown\",\"prepared_failed_banks\",\"city_state\",\"economy_and_failed_banks_merged\"]"
+        "value": "[\"view_city_bank_shutdowns_acquisitions\",\"view_economic_data_bank_shutdown\",\"prepared_failed_banks\",\"city_state\",\"economy_and_failed_banks_merged\",\"view_economic_data_bank_shutdown (2)\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -94,6 +94,33 @@
         "isActive": false,
         "toColumn": "Year",
         "toTable": "economy_and_failed_banks_merged"
+      },
+      {
+        "name": "d6a9f157-8ee3-4965-9e33-1788b92a5740",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "Year",
+        "fromTable": "view_economic_data_bank_shutdown",
+        "toColumn": "Year",
+        "toTable": "view_economic_data_bank_shutdown (2)"
+      },
+      {
+        "name": "4241d30c-9627-43a0-a5b2-0056a4edc98a",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "Year",
+        "fromTable": "economy_and_failed_banks_merged",
+        "isActive": false,
+        "toColumn": "Year",
+        "toTable": "view_economic_data_bank_shutdown (2)"
+      },
+      {
+        "name": "2681040c-fcfc-4fbf-b60f-c69afb88104f",
+        "fromColumn": "YEAR",
+        "fromTable": "prepared_failed_banks",
+        "isActive": false,
+        "toColumn": "Year",
+        "toTable": "view_economic_data_bank_shutdown (2)"
       }
     ],
     "sourceQueryCulture": "en-GB",
@@ -1181,6 +1208,200 @@
                 "let",
                 "    Source = Table.NestedJoin(view_economic_data_bank_shutdown, {\"Year\"}, prepared_failed_banks, {\"YEAR\"}, \"prepared_failed_banks\", JoinKind.Inner),",
                 "    #\"Renamed Columns\" = Table.RenameColumns(Source,{{\"Inflation GDP Percentage\", \"Inflation GDP %\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "view_economic_data_bank_shutdown (2)",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1b7f499b-9924-4992-bd0e-6c5ba7cd2050",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ShutDowns",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9c4c7a8f-696b-4ce1-b276-aab4df8f2a39",
+            "sourceColumn": "ShutDowns",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Acquisitions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f226eb10-dcc5-4faf-8db1-9139a1154079",
+            "sourceColumn": "Acquisitions",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Real Estate Loans % Change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c2bc0472-9073-4997-9093-b87ebeb3f320",
+            "sourceColumn": "Real Estate Loans % Change",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Consumer Loans (Billions)- Bank Credit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "76edcb8f-e676-464e-b384-fc421ccd8344",
+            "sourceColumn": "Consumer Loans (Billions)- Bank Credit",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Consumer Card Loans % Change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "27bcfd0f-aeda-4de1-a701-810304c05020",
+            "sourceColumn": "Consumer Card Loans % Change",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Consumer Loans (Billions)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "8aa9a906-4df1-4de4-98c7-b02617b46c7f",
+            "sourceColumn": "Consumer Loans (Billions)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Borrowings % Change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "fcca29af-2ceb-459f-89e3-a57d374b71d3",
+            "sourceColumn": "Borrowings % Change",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Bank Credit % Change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "db691be7-d065-46a7-baed-269ead477f1d",
+            "sourceColumn": "Bank Credit % Change",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Inflation GDP %",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "fdd25e1c-95f3-44d7-a9fe-850aeb5dfb0c",
+            "sourceColumn": "Inflation GDP %",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "a100c4e9-b752-4bdb-aeaa-e27daca59533",
+        "partitions": [
+          {
+            "name": "view_economic_data_bank_shutdown (2)",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"localhost\\SQLEXPRESS\", \"us_banks-database\"),",
+                "    dbo_view_economic_data_bank_shutdown = Source{[Schema=\"dbo\",Item=\"view_economic_data_bank_shutdown\"]}[Data],",
+                "    #\"Renamed Columns\" = Table.RenameColumns(dbo_view_economic_data_bank_shutdown,{{\"Real_Estate_Loans_Percent_Change\", \"Real Estate Loans % Change\"}, {\"Consumer_Loans_In_Billions_Bank_Credit\", \"Consumer Loans (Billions)- Bank Credit\"}, {\"Consumer_Card_Loans_Percent_Change\", \"Consumer Card Loans % Change\"}, {\"Consumer_Loans_In_Billions\", \"Consumer Loans (Billions)\"}, {\"Borrowings_Percentage_Change\", \"Borrowings % Change\"}, {\"Bank_credit_Percent_Change\", \"Bank Credit % Change\"}, {\"Inflation_GDP_Percentage\", \"Inflation GDP %\"}})",
                 "in",
                 "    #\"Renamed Columns\""
               ],

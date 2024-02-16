@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 400.20156119318517,
-            "y": 8.2500000000000568
+            "x": 485.20156119318517,
+            "y": 5.3750000000000568
           },
           "nodeIndex": "prepared_failed_banks",
           "nodeLineageTag": "5563eb4a-27bf-46ae-9b7c-aa47fed26971",
@@ -19,12 +19,12 @@
             "height": 272,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 471,
-            "y": 461.39041281975449
+            "x": 893,
+            "y": 329.51541281975449
           },
           "nodeIndex": "view_city_bank_shutdowns_acquisitions",
           "nodeLineageTag": "3e13f692-019b-4ca1-85c9-b617d0bc3ded",
@@ -32,12 +32,12 @@
             "height": 202,
             "width": 226
           },
-          "zIndex": 1
+          "zIndex": 2
         },
         {
           "location": {
             "x": 0,
-            "y": 121.75
+            "y": 0
           },
           "nodeIndex": "view_economic_data_bank_shutdown",
           "nodeLineageTag": "939a104c-9c40-4956-b4f2-6a45b0d762aa",
@@ -45,12 +45,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 774.18148882150854,
-            "y": 260.32020640987724
+            "x": 834.18148882150854,
+            "y": 7.4452064098772439
           },
           "nodeIndex": "city_state",
           "nodeLineageTag": "6c83b176-2a0f-41d0-81d0-d3ef676f5083",
@@ -58,12 +58,12 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 210.18148882150854,
-            "y": 409.32020640987719
+            "x": 462.18148882150854,
+            "y": 387.44520640987719
           },
           "nodeIndex": "economy_and_failed_banks_merged",
           "nodeLineageTag": "f6a78b46-7b1a-49c8-bdb3-2e26101da810",
@@ -71,7 +71,20 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 402.66010320493854
+          },
+          "nodeIndex": "view_economic_data_bank_shutdown (2)",
+          "nodeLineageTag": "a100c4e9-b752-4bdb-aeaa-e27daca59533",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
         }
       ],
       "name": "All tables",
