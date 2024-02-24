@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.50\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2},\"customTheme\":{\"name\":\"AccessibleDefault\",\"version\":\"5.50\",\"type\":2}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2},\"customTheme\":{\"name\":\"Storm7327819154031352.json\",\"version\":\"5.51\",\"type\":1}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
   "layoutOptimization": 0,
   "pods": [
     {
@@ -14,13 +14,8 @@
         "disabled": false,
         "items": [
           {
-            "name": "AccessibleDefault",
-            "path": "BuiltInThemes/AccessibleDefault.json",
-            "type": 201
-          },
-          {
-            "name": "CY23SU11",
-            "path": "BaseThemes/CY23SU11.json",
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
             "type": 202
           },
           {
@@ -32,12 +27,26 @@
         "name": "SharedResources",
         "type": 2
       }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Storm7327819154031352.json",
+            "path": "Storm7327819154031352.json",
+            "type": 201
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
     }
   ],
   "sections": [
     {
       "config": "{}",
-      "displayName": "Page 3",
+      "displayName": "Economy vs Borrowing Grid",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
@@ -67,20 +76,19 @@
     },
     {
       "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"183L\"}}}}}]}}",
-      "displayName": "Page 2",
+      "displayName": "Map and Cities",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "ReportSection5a569f002bc8220b098e",
-      "ordinal": 1,
       "visualContainers": [
         {
-          "config": "{\"name\":\"05bd4a3467ed4544875c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":677.7777777777777,\"y\":12.222222222222221,\"z\":2000,\"width\":452.22222222222223,\"height\":135.55555555555554,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"prepared_failed_banks.YEAR\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"prepared_failed_banks\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"YEAR\"},\"Name\":\"prepared_failed_banks.YEAR\",\"NativeReferenceName\":\"Slice Data Per Year\"}]},\"columnProperties\":{\"prepared_failed_banks.YEAR\":{\"displayName\":\"Slice Data Per Year\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"shapeCustomRectangle\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"22L\"}}},\"rectangleRoundedCurveCustomStyle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"id\":\"default\"}}],\"padding\":[{\"properties\":{\"paddingSelection\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"rowCount\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"columnCount\":{\"expr\":{\"Literal\":{\"Value\":\"7L\"}}},\"cellPadding\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}}}}],\"overFlow\":[{\"properties\":{\"overFlowDirection\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "config": "{\"name\":\"05bd4a3467ed4544875c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":677.9294823705926,\"y\":21.12528132033008,\"z\":2000,\"width\":499.32483120780194,\"height\":126.75168792198049,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"prepared_failed_banks.YEAR\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"prepared_failed_banks\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"YEAR\"},\"Name\":\"prepared_failed_banks.YEAR\",\"NativeReferenceName\":\"Slice Data Per Year\"}]},\"columnProperties\":{\"prepared_failed_banks.YEAR\":{\"displayName\":\"Slice Data Per Year\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"shapeCustomRectangle\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"22L\"}}},\"rectangleRoundedCurveCustomStyle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"id\":\"default\"}}],\"padding\":[{\"properties\":{\"paddingSelection\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"rowCount\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"columnCount\":{\"expr\":{\"Literal\":{\"Value\":\"7L\"}}},\"cellPadding\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}}}}],\"overFlow\":[{\"properties\":{\"overFlowDirection\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 135.56,
-          "width": 452.22,
-          "x": 677.78,
-          "y": 12.22,
+          "height": 126.75,
+          "width": 499.32,
+          "x": 677.93,
+          "y": 21.13,
           "z": 2000.00
         },
         {
@@ -102,7 +110,7 @@
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"5f1bb2be6de8bd067015\",\"layouts\":[{\"id\":0,\"position\":{\"x\":70.09752438109527,\"y\":12.483120780195048,\"z\":4000,\"width\":595.3488372093022,\"height\":352.40810202550637,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"shapeMap\",\"projections\":{\"Category\":[{\"queryRef\":\"prepared_failed_banks.State\"}],\"Value\":[{\"queryRef\":\"CountNonNull(prepared_failed_banks.City)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"prepared_failed_banks\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"State\"},\"Name\":\"prepared_failed_banks.State\",\"NativeReferenceName\":\"State\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"City\"}},\"Function\":5},\"Name\":\"CountNonNull(prepared_failed_banks.City)\",\"NativeReferenceName\":\"Count of City\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"map\":{\"geoJson\":{\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'shared'\"}}},\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'usa.states.topo'\"}}},\"content\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"SharedResources\",\"PackageType\":2,\"ItemName\":\"usa.states.topo\"}}}}},\"projectionEnum\":{\"expr\":{\"Literal\":{\"Value\":\"'albersUsa'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}},\"max\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'maxColor'\"}}}},\"nullColoringStrategy\":{\"strategy\":{\"expr\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}],\"zoom\":[{\"properties\":{\"autoZoom\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Bank Shut Down Locations'\"}}}}}],\"subTitle\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Colour reflects states with most cities where bank shut downs (closures) occured.'\"}}}}}]}}}",
+          "config": "{\"name\":\"5f1bb2be6de8bd067015\",\"layouts\":[{\"id\":0,\"position\":{\"x\":70.09752438109527,\"y\":12.483120780195048,\"z\":4000,\"width\":595.3488372093022,\"height\":352.40810202550637,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"shapeMap\",\"projections\":{\"Category\":[{\"queryRef\":\"prepared_failed_banks.State\"}],\"Value\":[{\"queryRef\":\"CountNonNull(prepared_failed_banks.City)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"prepared_failed_banks\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"State\"},\"Name\":\"prepared_failed_banks.State\",\"NativeReferenceName\":\"State\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"City\"}},\"Function\":5},\"Name\":\"CountNonNull(prepared_failed_banks.City)\",\"NativeReferenceName\":\"Count of City\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"map\":{\"geoJson\":{\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'shared'\"}}},\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'usa.states.topo'\"}}},\"content\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"SharedResources\",\"PackageType\":2,\"ItemName\":\"usa.states.topo\"}}}}},\"projectionEnum\":{\"expr\":{\"Literal\":{\"Value\":\"'albersUsa'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}},\"max\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'maxColor'\"}}}},\"nullColoringStrategy\":{\"strategy\":{\"expr\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}],\"zoom\":[{\"properties\":{\"autoZoom\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Bank Shut Down Locations from 2000 to 2020'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Heading2'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"subTitle\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Colour reflects states with most cities where bank shut downs (closures) occured.'\"}}}}}]}}}",
           "filters": "[]",
           "height": 352.41,
           "width": 595.35,
@@ -151,11 +159,12 @@
     },
     {
       "config": "{}",
-      "displayName": "Page 1",
+      "displayName": "Economic Trends",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "ReportSectionf67dab1722000b4802cd",
+      "ordinal": 1,
       "visualContainers": [
         {
           "config": "{\"name\":\"27e4259313ba1b4220dc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"view_economic_data_bank_shutdown (2).Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(view_economic_data_bank_shutdown (2).Consumer Loans (Billions))\"},{\"queryRef\":\"Sum(view_economic_data_bank_shutdown (2).Consumer Card Loans % Change)\"},{\"queryRef\":\"Sum(view_economic_data_bank_shutdown (2).Consumer Loans (Billions)- Bank Credit)\"},{\"queryRef\":\"Sum(view_economic_data_bank_shutdown (2).Borrowings % Change)\"},{\"queryRef\":\"Sum(view_economic_data_bank_shutdown (2).Bank Credit % Change)\"},{\"queryRef\":\"Sum(view_economic_data_bank_shutdown (2).Real Estate Loans % Change)\"},{\"queryRef\":\"Sum(view_economic_data_bank_shutdown (2).ShutDowns)\"}],\"Y2\":[{\"queryRef\":\"Sum(view_economic_data_bank_shutdown (2).Inflation GDP %)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"view_economic_data_bank_shutdown (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Year\"},\"Name\":\"view_economic_data_bank_shutdown (2).Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Consumer Loans (Billions)\"}},\"Function\":1},\"Name\":\"Sum(view_economic_data_bank_shutdown (2).Consumer Loans (Billions))\",\"NativeReferenceName\":\"Average of Consumer Loans (Billions)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Consumer Card Loans % Change\"}},\"Function\":1},\"Name\":\"Sum(view_economic_data_bank_shutdown (2).Consumer Card Loans % Change)\",\"NativeReferenceName\":\"Average of Consumer Card Loans % Change\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Consumer Loans (Billions)- Bank Credit\"}},\"Function\":1},\"Name\":\"Sum(view_economic_data_bank_shutdown (2).Consumer Loans (Billions)- Bank Credit)\",\"NativeReferenceName\":\"Average of Consumer Loans (Billions)- Bank Credit\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Borrowings % Change\"}},\"Function\":1},\"Name\":\"Sum(view_economic_data_bank_shutdown (2).Borrowings % Change)\",\"NativeReferenceName\":\"Average of Borrowings % Change\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Bank Credit % Change\"}},\"Function\":1},\"Name\":\"Sum(view_economic_data_bank_shutdown (2).Bank Credit % Change)\",\"NativeReferenceName\":\"Average of Bank Credit % Change\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Real Estate Loans % Change\"}},\"Function\":1},\"Name\":\"Sum(view_economic_data_bank_shutdown (2).Real Estate Loans % Change)\",\"NativeReferenceName\":\"Average of Real Estate Loans % Change\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"ShutDowns\"}},\"Function\":1},\"Name\":\"Sum(view_economic_data_bank_shutdown (2).ShutDowns)\",\"NativeReferenceName\":\"Average of ShutDowns\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Inflation-to-GDP %\"}},\"Function\":1},\"Name\":\"Sum(view_economic_data_bank_shutdown (2).Inflation GDP %)\",\"NativeReferenceName\":\"Average of Inflation-to-GDP %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Consumer Loans (Billions)\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"legendMarkerRendering\":{\"expr\":{\"Literal\":{\"Value\":\"'lineAndMarker'\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}}}],\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"secLogAxisScale\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"secShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"totals\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Economic Data Trends Compared to Bank Failures'\"}}}}}]}}}",
@@ -170,5 +179,5 @@
       "width": 1280.00
     }
   ],
-  "theme": "AccessibleDefault"
+  "theme": "Storm7327819154031352.json"
 }
