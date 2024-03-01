@@ -347,7 +347,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Shutdowns",
+            "name": "Closures",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -357,7 +357,7 @@
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "05a93e1b-0356-4947-b56c-9009baadbcbe",
-            "sourceColumn": "Shutdowns",
+            "sourceColumn": "Closures",
             "summarizeBy": "sum"
           },
           {
@@ -389,7 +389,7 @@
             "summarizeBy": "sum"
           },
           {
-            "name": "Shutdowns Cities",
+            "name": "Bank Closure Cities",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -398,7 +398,7 @@
             ],
             "dataType": "string",
             "lineageTag": "7695e6d0-3589-42a5-a013-06b8ac0a705a",
-            "sourceColumn": "Shutdowns Cities",
+            "sourceColumn": "Bank Closure Cities",
             "summarizeBy": "none"
           }
         ],
@@ -412,7 +412,7 @@
                 "let",
                 "    Source = Sql.Database(\"localhost\\SQLEXPRESS\", \"us_banks-database\"),",
                 "    dbo_view_city_bank_shutdowns_acquisitions = Source{[Schema=\"dbo\",Item=\"view_city_bank_shutdowns_acquisitions\"]}[Data],",
-                "    #\"Renamed Columns\" = Table.RenameColumns(dbo_view_city_bank_shutdowns_acquisitions,{{\"Acquisitions_per_state\", \"Acquisitions per State\"}, {\"Cities_of_shutdowns_per_state\", \"Shutdowns Cities\"}, {\"Not_acquired_per_state\", \"Not Acquired per State\"}, {\"Count_of_Shutdowns\", \"Shutdowns\"}, {\"state\", \"State\"}})",
+                "    #\"Renamed Columns\" = Table.RenameColumns(dbo_view_city_bank_shutdowns_acquisitions,{{\"Acquisitions_per_state\", \"Acquisitions per State\"}, {\"Cities_of_shutdowns_per_state\", \"Bank Closure Cities\"}, {\"Not_acquired_per_state\", \"Not Acquired per State\"}, {\"Count_of_Shutdowns\", \"Closures\"}, {\"state\", \"State\"}})",
                 "in",
                 "    #\"Renamed Columns\""
               ],
@@ -1041,7 +1041,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Shut Downs",
+            "name": "Bank Closures",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -1051,7 +1051,7 @@
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "60f81b91-f752-4a2c-81af-bb72e0aa0a69",
-            "sourceColumn": "Shut Downs",
+            "sourceColumn": "Bank Closures",
             "summarizeBy": "sum"
           },
           {
@@ -1197,7 +1197,7 @@
               "expression": [
                 "let",
                 "    Source = Table.NestedJoin(view_economic_data_bank_shutdown, {\"Year\"}, prepared_failed_banks, {\"YEAR\"}, \"prepared_failed_banks\", JoinKind.Inner),",
-                "    #\"Renamed Columns\" = Table.RenameColumns(Source,{{\"Inflation GDP Percentage\", \"Inflation GDP %\"}})",
+                "    #\"Renamed Columns\" = Table.RenameColumns(Source,{{\"Inflation GDP Percentage\", \"Inflation GDP %\"}, {\"Shut Downs\", \"Bank Closures\"}})",
                 "in",
                 "    #\"Renamed Columns\""
               ],
