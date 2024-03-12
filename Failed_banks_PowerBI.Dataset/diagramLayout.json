@@ -62,8 +62,8 @@
         },
         {
           "location": {
-            "x": 462.18148882150854,
-            "y": 387.44520640987719
+            "x": 568.18148882150854,
+            "y": 466.44520640987719
           },
           "nodeIndex": "economy_and_failed_banks_merged",
           "nodeLineageTag": "f6a78b46-7b1a-49c8-bdb3-2e26101da810",
@@ -72,19 +72,6 @@
             "width": 234
           },
           "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 0,
-            "y": 402.66010320493854
-          },
-          "nodeIndex": "view_economic_data_bank_shutdown (2)",
-          "nodeLineageTag": "a100c4e9-b752-4bdb-aeaa-e27daca59533",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 6
         }
       ],
       "name": "All tables",
