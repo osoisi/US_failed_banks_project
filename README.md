@@ -1,5 +1,5 @@
 # Failed Banks in the US
- US Banking Data Highlighting the Failed Banks over the Last Two Decades. This project relies on World Bank and America's Federal Deposit Insurance Corporation (FDIC) data. The goal is to map the state of the economy to the bank failures.
+ US Banking Data Highlights the Failed Banks over the Last Two Decades. This project relies on data from the World Bank and America's Federal Deposit Insurance Corporation (FDIC). The goal was to map the state of the economy to the bank failures in each year between 2000 and 2020.
 
  ![image](https://github.com/osoisi/US_failed_banks_project/assets/42849017/8b6d6ada-9640-49b6-8adc-8dc3adced92b)
 
