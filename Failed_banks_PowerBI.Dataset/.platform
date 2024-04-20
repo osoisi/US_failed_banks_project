@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Failed_banks_PowerBI"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c155b774-6c4b-4cd2-ac40-5f098cf2573c"
+  }
+}

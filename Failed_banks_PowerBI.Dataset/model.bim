@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.126.1261.0 (24.02)"
+        "value": "2.128.952.0 (24.04)"
       },
       {
         "name": "PBI_ProTooling",
@@ -25,7 +25,6 @@
         "name": "en-GB",
         "linguisticMetadata": {
           "content": {
-            "DynamicImprovement": "HighConfidence",
             "Language": "en-US",
             "Version": "1.0.0"
           },
@@ -706,6 +705,25 @@
           }
         ],
         "lineageTag": "5563eb4a-27bf-46ae-9b7c-aa47fed26971",
+        "measures": [
+          {
+            "name": "Was Acquired?",
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "expression": "CALCULATE(COUNTX(prepared_failed_banks,prepared_failed_banks[Acquiring_Bank_ID]))",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "43d197af-f481-4ae5-a20d-71df722736dc"
+          },
+          {
+            "name": "Was Acquired? (Yes/No)",
+            "expression": "IF([Was Acquired?]>=1,\"Yes\",\"No\")",
+            "lineageTag": "a125bdfa-1a51-474a-96b2-312e92555e3d"
+          }
+        ],
         "partitions": [
           {
             "name": "prepared_failed_banks",
