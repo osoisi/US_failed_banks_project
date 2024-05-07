@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.128.952.0 (24.04)"
+        "value": "2.128.1380.0 (24.04)"
       },
       {
         "name": "PBI_ProTooling",
@@ -678,7 +678,6 @@
             ],
             "dataType": "dateTime",
             "formatString": "Long Date",
-            "isHidden": true,
             "lineageTag": "6e553fcb-1341-4087-9490-5b55b9ba41b2",
             "sourceColumn": "Shutdown_Date",
             "summarizeBy": "none"
